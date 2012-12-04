@@ -84,7 +84,13 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 set ofu=syntaxcomplete#Complete
+set completeopt=menuone,longest,preview
 
+" para activar minibufexp
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
 
 " para que la tecla tab sirva para insertar un tabulador si no hay nada que
 " completar. Si lo hay, usa una omnifunction, si no, una completación por
