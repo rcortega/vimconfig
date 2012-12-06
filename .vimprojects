@@ -1,0 +1,14 @@
+PFC = PFC/code/pfc/pfc CD=. {
+   
+PFC/code/manage.py
+PFC/code/pfc/__init__.py
+PFC/code/pfc/__init__.pyc
+PFC/code/pfc/settings.py
+PFC/code/pfc/settings.pyc
+PFC/code/pfc/urls.py
+PFC/code/pfc/urls.pyc
+PFC/code/pfc/wsgi.py
+PFC/code/pfc/wsgi.pyc
+   
+
+}

@@ -85,8 +85,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 set ofu=syntaxcomplete#Complete
-
-
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
 " para que la tecla tab sirva para insertar un tabulador si no hay nada que
 " completar. Si lo hay, usa una omnifunction, si no, una completación por
 " diccionario y si no completa simplemente una palabra conocida
