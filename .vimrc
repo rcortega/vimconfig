@@ -1,8 +1,13 @@
 set nocompatible                " desactiva compatibilidad con vi
 filetype off
-call pathogen#runtime_append_all_bundles()
+" call pathogen#runtime_append_all_bundles()
 call pathogen#infect()          " activa pathogen
-call pathogen#helptags()
+" call pathogen#helptags()
+
+syntax on                       " resaltado de sintaxis
+filetype on                     " detección de tipo de fichero
+filetype plugin on              " para escribir en cualquier lenguaje
+filetype plugin indent on       " indentación basada en tipo de fichero
 
 set modelines=0
 
@@ -56,10 +61,6 @@ cmap w!! w !sudo tee % >/dev/null
                                 " el que no tenías permisos (en lugar de salir,
                                 " sudo...)
 
-syntax on                       " resaltado de sintaxis
-filetype on                     " detección de tipo de fichero
-filetype plugin on              " para escribir en cualquier lenguaje
-filetype plugin indent on       " indentación basada en tipo de fichero
 
 set history=1000                " remember more commands and search history
 set undolevels=1000             " use many muchos levels of undo
@@ -84,13 +85,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 set ofu=syntaxcomplete#Complete
-set completeopt=menuone,longest,preview
 
-" para activar minibufexp
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
 
 " para que la tecla tab sirva para insertar un tabulador si no hay nada que
 " completar. Si lo hay, usa una omnifunction, si no, una completación por
@@ -109,4 +104,4 @@ function! SuperCleverTab()
     endif
 endfunction
 
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+" inoremap <Tab> <C-R>=SuperCleverTab()<cr>
